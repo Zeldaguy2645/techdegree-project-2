@@ -25,9 +25,9 @@ const showPage = (list, page) => {
 
       for (let i = 0, i <= students.length, i++) {
           if [i] >= startList && [i] <= endList {
-            [i].display = 'block';
+            [i].style.display = 'block';
           } else {
-              [i].display = 'none';
+              [i].style.display = 'none';
           }
 
       }
