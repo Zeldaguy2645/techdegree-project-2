@@ -20,11 +20,11 @@ const showPage = (list, page) => {
       let startList = (page * pageItems) - pageItems;
       let endList = page * pageItems;
 
-      for (let i = 0; i <= students.length, i++) {
-          if ([i] >= startList && [i] <= endList) {
-            [i].style.display = 'block';
+      for (let i = 0; i <= list.length; i++) {
+          if (list[i] >= startList && list[i] <= endList) {
+            list[i].style.display = 'block';
           } else {
-              [i].style.display = 'none';
+              list[i].style.display = 'none';
           }
 
       }
