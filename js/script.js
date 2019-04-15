@@ -1,6 +1,6 @@
 
 const students = document.getElementsByTagName('li');
-const pageItems = 10;
+
 /***
    Create the `showPage` function to hide all of the items in the
    list except for the ten you want to show.
@@ -16,17 +16,18 @@ const pageItems = 10;
        "invoke" the function
 ***/
 const showPage = (list, page) => {
+      const pageItems = 10;
       let startList = (page * pageItems) - pageItems;
       let endList = page * pageItems;
 
       for (let i = 0, i <= students.length, i++) {
-          if [i] >= startList && [i] <= endList {
+          if ([i] >= startList && [i] <= endList {
             [i].style.display = 'block';
           } else {
               [i].style.display = 'none';
           }
 
-      }
+      )}
 
 }
 
