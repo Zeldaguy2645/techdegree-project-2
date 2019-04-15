@@ -1,4 +1,4 @@
-
+//Here the global varible is defined.
 const students = document.getElementsByTagName('li');
 
 /***
@@ -20,16 +20,16 @@ const showPage = (list, page) => {
       let startList = (page * pageItems) - pageItems;
       let endList = page * pageItems;
 
-      for (let i = 0, i <= students.length, i++) {
-          if ([i] >= startList && [i] <= endList {
+      for (let i = 0; i <= students.length, i++) {
+          if ([i] >= startList && [i] <= endList) {
             [i].style.display = 'block';
           } else {
               [i].style.display = 'none';
           }
 
-      )}
+      }
 
-}
+};
 
 
 
@@ -38,8 +38,7 @@ const showPage = (list, page) => {
    functionality to the pagination buttons.
 ***/
 const appendPageLinks = (list) => {
-
-
+      let div = document.createElement('div');
 }
 
 
