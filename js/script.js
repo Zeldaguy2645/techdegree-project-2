@@ -1,4 +1,5 @@
-//Here the global varible is defined.
+//Here the global varibles are defined.
+const mainDiv = document.querySelector('.page');
 const students = document.getElementsByTagName('li');
 
 /***
@@ -39,7 +40,15 @@ const showPage = (list, page) => {
 ***/
 const appendPageLinks = (list) => {
       let div = document.createElement('div');
-}
+      let ul = document.createElement('ul');
+      div.className = 'pagination'
+      mainDiv.appendChild(div);
+      div.appendChild(ul);
+
+      for (let i = 0; i < list.length; i++) {
+
+      }
+};
 
 
 
