@@ -26,7 +26,7 @@ const students = document.getElementsByTagName('li');
 const showPage = (list, page) => {
       const pageItems = 10;
       const listLength = list.length;
-      let startList = (page * pageItems) - pageItems;
+      let startList = (page * pageItems) - pageItems -1;
       let endList = page * pageItems;
 
       for (let i = 0; i < listLength; i++)
