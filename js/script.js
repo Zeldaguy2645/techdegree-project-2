@@ -20,7 +20,7 @@ const showPage = (list, page) => {
           } else {
               list[i].style.display = 'none';
           }
-      };
+};
 
 /***
    Create the `appendPageLinks function` to generate, append, and add
@@ -33,7 +33,9 @@ const appendPageLinks = (list) => {
       mainDiv.appendChild(div);
       div.appendChild(ul);
 
-      for (let i = 0; i < list.length; i++) {
+      a.addEventListener('click' (e) => {
+        for (let i = 0; i < list.length; i++) {
 
-      }
+        }
+      })
 };
