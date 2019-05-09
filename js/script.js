@@ -25,27 +25,30 @@ const showPage = (list, page) => {
 };
 
 /***
-   Create the `appendPageLinks function` to generate, append, and add
-   functionality to the pagination buttons.
+  - Here a function is created that appends the ul and li elements to create
+    the page number links on each individual page.
+  - An event listener is added so that when clicked the links will show the
+    correct page number and correct number of students.
 ***/
 const appendPageLinks = (list) => {
       let li = document.createElement('li');
       let a = document.createElement('a');
-      let pages = Math.ceil(students.length / 10);
+      let pages = Math.ceil(list.length / 10);
       div.className = 'pagination';
       mainDiv.appendChild(div);
       div.appendChild(ul);
 
 
-      for (i = 0; i <= pages; i++) {
+      for (let i = 0; i <= pages; i++) {
           ul.appendChild(li);
           li.appendChild(a);
+          a.textContent.value = pages[i];
+
+          a.addEventListener('click', (e) => {
+            a.target.event = showPage(students, 3);
+
+          })
         }
-
-      a.addEventListener('click', (e) => {
-        a.target.event = showPage(students, 2);
-
-      })
 };
-
-appendPageLinks();
+showPage(students, 1);
+appendPageLinks(students);
