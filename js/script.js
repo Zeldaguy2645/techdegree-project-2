@@ -3,8 +3,6 @@ const mainDiv = document.querySelector('.page');
 const students = document.getElementsByTagName('li');
 let div = document.createElement('div');
 let ul = document.createElement('ul');
-let li = document.createElement('li');
-let a = document.createElement('a');
 
 /***
     -Here a function is created that takes in the parameters of the
@@ -31,7 +29,9 @@ const showPage = (list, page) => {
    functionality to the pagination buttons.
 ***/
 const appendPageLinks = (list) => {
-      let pages = Math.round(list.length / 10);
+      let li = document.createElement('li');
+      let a = document.createElement('a');
+      let pages = Math.ceil(students.length / 10);
       div.className = 'pagination';
       mainDiv.appendChild(div);
       div.appendChild(ul);
@@ -43,7 +43,9 @@ const appendPageLinks = (list) => {
         }
 
       a.addEventListener('click', (e) => {
-        a.target.event = showPage();
+        a.target.event = showPage(students, 2);
 
       })
 };
+
+appendPageLinks();
