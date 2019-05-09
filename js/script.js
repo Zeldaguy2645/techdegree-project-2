@@ -1,6 +1,10 @@
 //Here the global varibles are defined to be used in the functions.
 const mainDiv = document.querySelector('.page');
 const students = document.getElementsByTagName('li');
+let div = document.createElement('div');
+let ul = document.createElement('ul');
+let li = document.createElement('li');
+let a = document.createElement('a');
 
 /***
     -Here a function is created that takes in the parameters of the
@@ -27,15 +31,19 @@ const showPage = (list, page) => {
    functionality to the pagination buttons.
 ***/
 const appendPageLinks = (list) => {
-      let div = document.createElement('div');
-      let ul = document.createElement('ul');
-      div.className = 'pagination'
+      let pages = Math.round(list.length / 10);
+      div.className = 'pagination';
       mainDiv.appendChild(div);
       div.appendChild(ul);
 
-      a.addEventListener('click' (e) => {
-        for (let i = 0; i < list.length; i++) {
 
+      for (i = 0; i <= pages; i++) {
+          ul.appendChild(li);
+          li.appendChild(a);
         }
+
+      a.addEventListener('click', (e) => {
+        a.target.event = showPage();
+
       })
 };
