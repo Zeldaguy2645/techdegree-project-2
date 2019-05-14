@@ -43,12 +43,13 @@ const appendPageLinks = (list) => {
           ul.appendChild(li);
           li.appendChild(a);
           a.textContent.value = pages[i];
-
-          a.addEventListener('click', (e) => {
-            a.target.event = showPage(students, 3);
-
-          })
         }
+
+      for () {
+        a.addEventListener('click', (e) => {
+          a.target.event = showPage(students, 4);
+        })
+      }
 };
 showPage(students, 1);
 appendPageLinks(students);
