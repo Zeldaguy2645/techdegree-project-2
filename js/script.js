@@ -1,5 +1,5 @@
 //Here the global varibles are defined to be used in the functions.
-const students = document.getElementsByTagName('li');
+const students = document.querySelectorAll('.student-item');
 
 /***
     -Here a function is created that takes in the parameters of the
@@ -10,7 +10,7 @@ const students = document.getElementsByTagName('li');
 const showPage = (list, page) => {
       const pageItems = 10;
       const listLength = list.length;
-      let startList = (page * pageItems) - pageItems -1;
+      let startList = (page * pageItems) - pageItems;
       let endList = page * pageItems;
 
       for (let i = 0; i < listLength; i++)
@@ -29,27 +29,39 @@ const showPage = (list, page) => {
 ***/
 const appendPageLinks = (list) => {
       const pages = Math.ceil(list.length / 10);
+      let mainDiv = document.querySelector('.page');
+      let div = document.createElement('div');
+      div.className = 'pagination';
+      let ul = document.createElement('ul');
 
 
 
       for (let i = 1; i <= pages; i++) {
-          let mainDiv = document.querySelector('.page');
           let li = document.createElement('li');
           let a = document.createElement('a');
-          let div = document.createElement('div');
-          let ul = document.createElement('ul');
-          div.className = 'pagination';
           mainDiv.appendChild(div);
           div.appendChild(ul);
           ul.appendChild(li);
           li.appendChild(a);
           a.textContent = i;
 
+
+
           a.addEventListener('click', (e) => {
-            a.target.event = showPage(students, i);
-            a.className = "active";
+            for () {
+              showPage(students, i);
+              document.querySelector('a').className = '';
+              a.className = "none"
+              a.className = "active";
+            }
           })
+
+
+
+      div.appendChild(ul);
+      mainDiv.appendChild(div);
         }
 };
 showPage(students, 1);
 appendPageLinks(students);
+document.querySelector('a').className = 'active';
