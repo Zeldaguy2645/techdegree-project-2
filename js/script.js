@@ -48,12 +48,12 @@ const appendPageLinks = (list) => {
 
 
           a.addEventListener('click', (e) => {
-            for () {
+            for (let i = 1; i <= pages; i++) {
+              a.className = "none";
+            }
               showPage(students, i);
               document.querySelector('a').className = '';
-              a.className = "none"
               a.className = "active";
-            }
           })
 
 
