@@ -39,7 +39,7 @@ const appendPageLinks = (list) => {
       for (let i = 1; i <= pages; i++) {
           let li = document.createElement('li');
           let a = document.createElement('a');
-          let aClass = document.querySelectorAll(".pagination li a.active");
+
           mainDiv.appendChild(div);
           div.appendChild(ul);
           ul.appendChild(li);
@@ -49,11 +49,13 @@ const appendPageLinks = (list) => {
 
 
           a.addEventListener('click', (e) => {
-            for (let i = 1; i <= pages; i++) {
-               aClass.className = "none";
+            let aClass = document.querySelectorAll(".pagination li a.active");
+            for (let i = 1; i < pages; i++) {
+
             }
               showPage(students, i);
               document.querySelector('a').className = '';
+              a[i].className = '';
               a.className = "active";
           })
 
