@@ -55,8 +55,9 @@ const appendPageLinks = (list) => {
             }
               showPage(students, i);
               document.querySelector('a').className = '';
-              a[i].className = '';
-              a.className = "active";
+              a.className = '';
+              e.target.className='active';
+              
           })
 
 
