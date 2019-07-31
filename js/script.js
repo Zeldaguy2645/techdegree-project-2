@@ -1,9 +1,9 @@
-//Here the global varibles are defined to be used in the functions.
+// Here the global varibles are defined to be used in the functions.
 const students = document.querySelectorAll('.student-item');
 
 /***
     -Here a function is created that takes in the parameters of the
-     list of students and the page number that they will be on.
+     list of students and the page number that they will be on
     -A for loop is created so that each individual list item is iterated
      through to determine which page they will be displayed on.
 ***/
